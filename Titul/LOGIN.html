@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glass-container">
+    <h2>Кіру</h2>
+    <form onsubmit="event.preventDefault(); showAnimation();">
+      <div class="input-group">
+        <input type="text" required>
+        <label>Пайдаланушы аты</label>
+      </div>
+
+      <div class="input-group">
+        <input type="password" required>
+        <label>Пароль</label>
+      </div>
+
+      <div class="remember-forgot">
+        <label><input type="checkbox">Қолданушыны есте сақтау</label>
+        <a href="#">Парольді ұмыттыңызба?</a>
+      </div>
+
+      <button type="submit" class="login-btn" id="loginBtn">
+        <span class="btn-text">Кіру</span>
+        <span class="btn-spinner" style="display:none;"></span>
+        <span class="btn-check" style="display:none;"></span>
+      </button>
+
+      <div class="register-link">
+        <p>Аккаунтыңыз жоқ па?
+          <a href="платформа/register.html">Тіркеліңіз</a>
+        </p>
+      </div>
+    </form>
+  </div>
+
+  <!-- Дыбыстар -->
+  <audio id="clickSound" src="click.mp3"></audio>
+  <audio id="dingSound" src="ding.mp3"></audio>
+
+  <script src="анимация.js"></script>
+</body>
+</html>

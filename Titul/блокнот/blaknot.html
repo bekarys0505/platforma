@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Онлайн Блокнот Pro</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- CodeMirror -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/dracula.min.css">
+</head>
+<body>
+  <div class="notepad">
+    <h2>Онлайн Блокнот Pro</h2>
+
+    <div class="toolbar">
+      <input type="text" id="filename" placeholder="Файл аты (мысалы: mynote.txt)">
+      <button onclick="saveToFile()">💾 Сақтау</button>
+      <button onclick="document.getElementById('fileInput').click()">📂 Аш</button>
+      <input type="file" id="fileInput" style="display:none">
+      <button onclick="clearNote()">🗑 Тазалау</button>
+      <button onclick="toggleTheme()">🌓 Тақырып ауыстыру</button>
+      <select id="modeSelect" onchange="changeMode(this.value)">
+        <option value="javascript">JavaScript</option>
+        <option value="htmlmixed">HTML</option>
+        <option value="css">CSS</option>
+        <option value="markdown">Markdown</option>
+      </select>
+    </div>
+
+    <div class="editor-preview">
+      <textarea id="note"></textarea>
+      <iframe id="preview"></iframe>
+    </div>
+
+    <div class="hint">
+      <span id="status">💡 Файлдарды кез келген мәтіндік форматта сақтай аласыз</span>
+    </div>
+  </div>
+
+  <!-- CodeMirror JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/markdown/markdown.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
